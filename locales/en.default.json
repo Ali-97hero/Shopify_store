@@ -539,7 +539,7 @@
   "shopify": {
     "checkout": {
       "order_summary": {
-        "gift_card_and_discount_placeholder": "Discount Code"
+        "gift_card_and_discount_label": "Discount Code"
       }
     }
   }
