@@ -543,8 +543,7 @@
         "subtotal_label_with_quantity": {
           "one": "Subtotal ({{count}} product)",
           "other": "Subtotal ({{count}} product's)"
-        },
-        "subtotal_label": "Subtotal ({{count}})"
+        }
       }
     }
   }
