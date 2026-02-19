@@ -1,0 +1,63 @@
+<div class="cart-content"></div>
+{{ cart.note }}
+<script>
+  async function getCart() {
+    const cartRequest = await fetch(window.Shopify.routes.root + 'cart.js');
+    const cart = await cartRequest.json();
+    return cart;
+  }
+  window.addToCart(variantId, quantity) {
+    const addToCartRequest = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        items: [
+          {
+            id: variantId,
+            quantity: quantity,
+            properties: {
+              _test: 'test',
+            },
+          },
+        ],
+        attributes: {
+          cart_test: 'Cart Test Attribute',
+        },
+        note: 'This is a note'
+        }
+      }),
+    });
+    window.location.reload();
+  }
+  async function getProductInfo (handle){
+    const productRequest = await fetch(`/product/${handle}.js`)
+    const product = await productRequest.json()
+    console.log(product)
+
+  }
+  async function ajaxAPI() {
+    // getCart
+  }
+  ajaxAPI();
+</script>
+
+<p>{{ section.settings.title }}</p>
+{% schema %}
+{
+  "name": "Apex API",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Apex API"
+    }
+  ]
+}
+{% endschema %}
