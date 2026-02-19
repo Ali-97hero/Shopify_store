@@ -283,7 +283,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -535,6 +534,17 @@
       "max_characters": "{{ max_chars }} characters max",
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "gift_card_and_discount_label": "Discount Code",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal ({{count}} product)",
+          "other": "Subtotal ({{count}} product's)"
+        }
+      }
     }
   }
 }
