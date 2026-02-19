@@ -539,7 +539,11 @@
   "shopify": {
     "checkout": {
       "order_summary": {
-        "gift_card_and_discount_label": "Discount Code"
+        "gift_card_and_discount_label": "Discount Code",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal ({{count}} product)",
+          "other": "Subtotal ({{count}} product's)"
+        }
       }
     }
   }
